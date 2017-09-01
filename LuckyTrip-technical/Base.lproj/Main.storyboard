@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--HomeVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="homeVC" id="BYZ-38-t0r" customClass="HomeVC" customModule="LuckyTrip_technical" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nM-jv-1eN">
+                                <rect key="frame" x="87.5" y="113" width="200" height="200"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.28627450980392155" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="axU-t4-62t"/>
+                                    <constraint firstAttribute="height" constant="200" id="qIS-Me-f5h"/>
+                                </constraints>
+                                <state key="normal" title="Select Country">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Zga-G4-uMd" kind="show" identifier="selectCountrySegue" id="cFy-da-t3b"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RCm-0Q-ico">
+                                <rect key="frame" x="10" y="333" width="355" height="1"/>
+                                <color key="backgroundColor" red="0.72156862745098038" green="0.72156862745098038" blue="0.72156862745098038" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="E7r-Kj-9Th"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KB2-pd-1TY">
+                                <rect key="frame" x="87.5" y="354" width="200" height="200"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.28627450980392155" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="NqF-aN-zof"/>
+                                    <constraint firstAttribute="height" constant="200" id="sKP-pJ-04E"/>
+                                </constraints>
+                                <state key="normal" title="Select Airport">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="OBB-9d-3ZD" kind="show" identifier="selectAirportSegue" id="7V9-KJ-Ust"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RCm-0Q-ico" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="51M-E4-AIZ"/>
+                            <constraint firstAttribute="trailing" secondItem="RCm-0Q-ico" secondAttribute="trailing" constant="10" id="5Uv-AX-rH9"/>
+                            <constraint firstItem="RCm-0Q-ico" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Fox-MP-KYH"/>
+                            <constraint firstItem="KB2-pd-1TY" firstAttribute="top" secondItem="RCm-0Q-ico" secondAttribute="bottom" constant="20" id="b0Z-Ur-oXZ"/>
+                            <constraint firstItem="KB2-pd-1TY" firstAttribute="centerX" secondItem="0nM-jv-1eN" secondAttribute="centerX" id="ckR-iM-W1c"/>
+                            <constraint firstItem="0nM-jv-1eN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="diD-e5-L2p"/>
+                            <constraint firstItem="RCm-0Q-ico" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="q95-Ae-lth"/>
+                            <constraint firstItem="RCm-0Q-ico" firstAttribute="top" secondItem="0nM-jv-1eN" secondAttribute="bottom" constant="20" id="vUh-RC-X7r"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="airportBtn" destination="KB2-pd-1TY" id="2Zl-Po-knr"/>
+                        <outlet property="countryBtn" destination="0nM-jv-1eN" id="YNc-mX-Pou"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--selectCountryVC-->
+        <scene sceneID="vGf-oe-07h">
+            <objects>
+                <tableViewController storyboardIdentifier="selectCountryVC" title="selectCountryVC" id="Zga-G4-uMd" customClass="SelectCountryVC" customModule="LuckyTrip_technical" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="7f4-A7-nyp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="countryCell" rowHeight="100" id="OGo-RP-zEe" customClass="CountryCell" customModule="LuckyTrip_technical" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OGo-RP-zEe" id="HZG-jC-NB3">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gMj-Pd-tcp">
+                                            <rect key="frame" x="10" y="25" width="50" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" priority="999" constant="50" id="ZkG-L0-xkO"/>
+                                                <constraint firstAttribute="width" constant="50" id="l9b-9Z-U47"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kDD-K7-2Gz">
+                                            <rect key="frame" x="70" y="39.5" width="295" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="kDD-K7-2Gz" firstAttribute="centerY" secondItem="gMj-Pd-tcp" secondAttribute="centerY" id="02h-J3-C3w"/>
+                                        <constraint firstItem="gMj-Pd-tcp" firstAttribute="centerY" secondItem="HZG-jC-NB3" secondAttribute="centerY" id="JTl-iW-MH9"/>
+                                        <constraint firstItem="kDD-K7-2Gz" firstAttribute="leading" secondItem="gMj-Pd-tcp" secondAttribute="trailing" constant="10" id="ORK-Zp-79G"/>
+                                        <constraint firstAttribute="trailing" secondItem="kDD-K7-2Gz" secondAttribute="trailing" constant="10" id="UCW-1q-bh3"/>
+                                        <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="gMj-Pd-tcp" secondAttribute="bottom" constant="10" id="hvQ-R6-KCf"/>
+                                        <constraint firstItem="gMj-Pd-tcp" firstAttribute="leading" secondItem="HZG-jC-NB3" secondAttribute="leading" constant="10" id="r8m-gc-wbv"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imgView" destination="gMj-Pd-tcp" id="alX-OD-lA5"/>
+                                    <outlet property="lbl" destination="kDD-K7-2Gz" id="rqF-hR-t2f"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Zga-G4-uMd" id="ZTT-fW-q0T"/>
+                            <outlet property="delegate" destination="Zga-G4-uMd" id="IhG-wB-Ke0"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4vG-rR-DFH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1081" y="-355"/>
+        </scene>
+        <!--selectAirportVC-->
+        <scene sceneID="vhC-2k-hsK">
+            <objects>
+                <tableViewController storyboardIdentifier="selectAirportVC" title="selectAirportVC" id="OBB-9d-3ZD" customClass="SelectAirpotVC" customModule="LuckyTrip_technical" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="b1w-FE-aGw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="aiC-aq-8bk">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aiC-aq-8bk" id="pc5-i1-bwn">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="OBB-9d-3ZD" id="PP8-CY-4ek"/>
+                            <outlet property="delegate" destination="OBB-9d-3ZD" id="GyY-1G-w5i"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yo1-C7-wol" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1098" y="406"/>
+        </scene>
+    </scenes>
+</document>
